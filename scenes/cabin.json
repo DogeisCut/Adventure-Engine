@@ -1,0 +1,128 @@
+{
+    "scene": "cabin",
+    "scene_text": [
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "has_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "eaten_pie",
+                    "value": false
+                }
+            ],
+            "output": "A log cabin lies between the hills. It is brown in color but wrapped in blue tarps. A cherry pie is visible on the windowsill, it smells like heaven itself has blessed your nose."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "has_pie",
+                    "value": true
+                }
+            ],
+            "output": "A log cabin lies between the hills. It is brown in color but wrapped in blue tarps. Despite having taken the pie, the heavenly smell still blesses your nose. Guilt curses your stomach, however."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "eaten_pie",
+                    "value": true
+                }
+            ],
+            "output": "A log cabin lies between the hills. It is brown in color but wrapped in blue tarps. Not a single smell blesses your nose, but woo boy, does guilt really clench the depths of your stomach now."
+        }
+    ],
+    "events": [
+        {
+            "type": "music_change",
+            "value": 2
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "has_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "eaten_pie",
+                    "value": false
+                }
+            ],
+            "text": "Steal the pie!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_steal"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "has_pie",
+                    "value": true
+                }
+            ],
+            "text": "Return the pie...",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_unsteal"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "eaten_pie",
+                    "value": true
+                }
+            ],
+            "text": "Write a sorry note...",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_sorry"
+                }
+            ]
+        },
+        {
+            "text": "Investigate the cabin.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_invest"
+                }
+            ]
+        },
+        {
+            "text": "Look elsewhere around the cabin.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_elsewhere"
+                }
+            ]
+        },
+        {
+            "text": "Go back.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "fields"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "scene": "desert",
+    "scene_text": [
+        {
+            "conditions": [
+            ],
+            "output": "A giant desert of dark purple sand spans the distance, a wild west style town is visible between the sand dunes. The air is quite cold despite the desert atmosphere."
+        }
+    ],
+    "events": [
+        {
+            "type": "music_change",
+            "value": 3
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Approach the town.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "town"
+                }
+            ]
+        },
+        {
+            "conditions": [
+            ],
+            "text": "Take some sand.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "desert_take"
+                }
+            ]
+        },
+        {
+            "conditions": [
+            ],
+            "text": "Go back.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "fields"
+                }
+            ]
+        }
+    ]
+}

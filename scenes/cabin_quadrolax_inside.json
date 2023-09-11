@@ -1,0 +1,17 @@
+{
+    "scene": "cabin_quadrolax_inside",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": ""
+        }
+    ],
+    "events": [
+        {
+            "type": "music_change",
+            "value": 6
+        }
+    ],
+    "choices": [
+    ]
+}

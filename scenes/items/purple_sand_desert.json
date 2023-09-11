@@ -1,0 +1,32 @@
+{
+    "item": "Purple Sand",
+    "scene": "desert",
+    "scene_text": [
+        {
+            "conditions": [
+            ],
+            "output": "You put the sand right back where you found it."
+        }
+    ],
+    "events": [
+        {
+            "type": "take_item",
+            "value": "Purple Sand"
+        },
+        {
+            "type": "disable_item_use"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Coolio.",
+            "events": [
+                {
+                    "type": "close_popup"
+                }
+            ]
+        }
+    ]
+}

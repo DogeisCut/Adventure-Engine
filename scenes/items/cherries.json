@@ -1,0 +1,32 @@
+{
+    "item": "Cherries",
+    "scene": "",
+    "scene_text": [
+        {
+            "conditions": [
+            ],
+            "output": "You bite into the juicy cherries. The fluids of the fruit fill your mouth as you chew on the flesh."
+        }
+    ],
+    "events": [
+        {
+            "type": "take_item",
+            "value": "Cherries"
+        },
+        {
+            "type": "disable_item_use"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Yum!",
+            "events": [
+                {
+                    "type": "close_popup"
+                }
+            ]
+        }
+    ]
+}
