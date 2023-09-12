@@ -168,7 +168,7 @@
             "type": "disable_item_use"
         },
         {
-            "type": "flag",
+            "type": "set_flag",
             "key": "opened_blue_gate",
             "value": true
         }

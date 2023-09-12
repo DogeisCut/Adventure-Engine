@@ -32,7 +32,7 @@
             "type": "disable_item_use"
         },
         {
-            "type": "flag",
+            "type": "set_flag",
             "key": "broke_gate_cherries",
             "value": true
         }
