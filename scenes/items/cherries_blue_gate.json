@@ -33,8 +33,7 @@
         },
         {
             "type": "set_flag",
-            "key": "broke_gate_cherries",
-            "value": true
+            "value": "broke_gate_cherries"
         }
     ],
     "choices": [

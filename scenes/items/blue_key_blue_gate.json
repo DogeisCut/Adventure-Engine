@@ -169,8 +169,7 @@
         },
         {
             "type": "set_flag",
-            "key": "opened_blue_gate",
-            "value": true
+            "value": "opened_blue_gate"
         }
     ],
     "choices": [
