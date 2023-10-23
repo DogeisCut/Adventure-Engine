@@ -1,0 +1,135 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0e1wa7rwgy62"]
+
+[ext_resource type="PackedScene" uid="uid://cyn3jee17lwma" path="res://ScenesEdit/Nodes/scene_node.tscn" id="1_m67e3"]
+[ext_resource type="PackedScene" uid="uid://bx40pv4qw6qie" path="res://ScenesEdit/Nodes/choice_node.tscn" id="2_2a5gl"]
+[ext_resource type="PackedScene" uid="uid://chtv7ma1sv2p5" path="res://ScenesEdit/Nodes/event_node.tscn" id="3_647dl"]
+
+[node name="ScenesEdit" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.094
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.0879974
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SceneNode" parent="GraphEdit" instance=ExtResource("1_m67e3")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 97.0
+offset_top = 187.848
+offset_right = 558.0
+offset_bottom = 425.848
+position_offset = Vector2(97, 187.848)
+
+[node name="ChoiceNode" parent="GraphEdit" instance=ExtResource("2_2a5gl")]
+layout_mode = 1
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 655.0
+offset_top = 177.0
+offset_right = 1116.0
+offset_bottom = 458.741
+position_offset = Vector2(655, 177)
+
+[node name="EventNode" parent="GraphEdit" instance=ExtResource("3_647dl")]
+layout_mode = 1
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1217.0
+offset_top = 56.0
+offset_right = 1678.0
+offset_bottom = 337.741
+position_offset = Vector2(1217, 56)
+
+[node name="AddScene" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.0188272
+anchor_right = 0.102
+anchor_bottom = 0.0668272
+offset_left = -0.128
+offset_top = -0.200001
+offset_right = 0.495995
+offset_bottom = -0.304005
+grow_horizontal = 2
+grow_vertical = 2
+text = "Add Scene +"
+metadata/_edit_use_anchors_ = true
+
+[node name="AddSceneConditionalText" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.327125
+anchor_top = 0.0141975
+anchor_right = 0.528729
+anchor_bottom = 0.0621975
+offset_left = 0.151993
+offset_top = -0.200001
+offset_right = -0.0960083
+offset_bottom = -0.304005
+grow_horizontal = 2
+grow_vertical = 2
+text = "Add Scene Conditional Text +"
+metadata/_edit_use_anchors_ = true
+
+[node name="AddChoiceConditional" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.536406
+anchor_top = 0.0137407
+anchor_right = 0.710135
+anchor_bottom = 0.0617407
+offset_left = -0.440033
+offset_top = 0.0959988
+offset_right = 0.423981
+offset_bottom = -0.00800323
+grow_horizontal = 2
+grow_vertical = 2
+text = "Add Choice Conditional +"
+metadata/_edit_use_anchors_ = true
+
+[node name="AddEvent" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.225806
+anchor_top = 0.017284
+anchor_right = 0.313806
+anchor_bottom = 0.065284
+offset_left = -0.127991
+offset_top = -0.200001
+offset_right = 0.495972
+offset_bottom = -0.304005
+grow_horizontal = 2
+grow_vertical = 2
+text = "Add Event +"
+metadata/_edit_use_anchors_ = true
+
+[node name="AddChoice" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113826
+anchor_top = 0.0188272
+anchor_right = 0.207035
+anchor_bottom = 0.0668272
+offset_left = -0.127991
+offset_top = -0.200001
+offset_right = 0.495972
+offset_bottom = -0.304005
+grow_horizontal = 2
+grow_vertical = 2
+text = "Add Choice +"
+metadata/_edit_use_anchors_ = true

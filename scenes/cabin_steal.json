@@ -14,6 +14,10 @@
         {
             "type": "set_flag",
             "value": "has_pie"
+        },
+        {
+            "type": "set_flag",
+            "value": "no_pie_on_windowsill"
         }
     ],
     "choices": [
