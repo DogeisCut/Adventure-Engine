@@ -76,8 +76,23 @@
             "text": "Return the pie...",
             "events": [
                 {
-                    "type": "change_scene",
-                    "value": "cabin_unsteal"
+                    "type": "popup",
+                    "value": [
+                        "A wave of guilt overwhelms you and you return the pie to where it once laid.",
+                        "Heh..."
+                    ]
+                },
+                {
+                    "type": "take_item",
+                    "value": "Cherry Pie"
+                },
+                {
+                    "type": "unset_flag",
+                    "value": "has_pie"
+                },
+                {
+                    "type": "unset_flag",
+                    "value": "no_pie_on_windowsill"
                 }
             ]
         },
