@@ -84,16 +84,13 @@ function renderScene(scene, instant = false) {
         const text = choice.text
         let showsUp = true
         if (conditions) {
-            conditions.forEach(condition => {
-                showsUp = showsUp && handleCondition(condition)
-            })
+            showsUp = conditions.every(condition => handleCondition(condition));  // i just learned about this!! :3
         }
         if (showsUp) {
             const choicElem = document.createElement("div");
             choicElem.className = "choice";
-            choicElem.onclick = function() {
-                chooseOption(i)
-            };
+            const id = i
+            choicElem.onclick = () => chooseOption(id)
             choicElem.innerHTML = `-${text}`;
             choicesElem.appendChild(choicElem);
         }
