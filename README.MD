@@ -10,7 +10,7 @@ The Adventure Engine is an engine designed for creating immersive text based adv
   - `take_item`: Similar to `give_item` but removes it from the inventory if it exists. Each instance of this event removes just one of the item.
   - `set_flag`: Adds a flag of any name to the session. Flags are usually snake case.
   - `unset_flag`: Removes a flag of any name to the session.
-  - `disable_item_use`: Does not take a value, disables the ability to use items until the next scene transition.
+  - `disable_item_use`: Does not take a value, disables the ability to use items until the next scene transition. Typically used within item scene's events to prevent using multiple items at once.
 - `choices`: The main meat and potatoes of a scene, these are the clickable choices a player is given when within a scene, all choices have a `conditions`, `text`, and `events` field. `conditions` are in exactly the same format as scene text conditions and they define when a choice shows up. `text` defines what the player sees for that choice. `events` are similar to scene events but have different types, all scene events are usable within choice events, but not the other way around. They are as follows:
   - `change_scene`: Changes the scene to the ID name provided by the `value`
   - `popup`: Currently unsupported, do not use.
