@@ -230,3 +230,4 @@ An item scene, specifically, for when cherries are used within the `blue_gate` s
     ]
 }
 ```
+For a more extensive example, check out the `Quadrolax World` subdirectory within the `Adventures` directory. It's a little adventure im working on that makes good use of various Adventure Engine features. As mentioned before you can run `node generatePackagedPlayer.js "Quadrolax World" "fields"` to package the adventure. I encourage you to play around with it and see how it works.
