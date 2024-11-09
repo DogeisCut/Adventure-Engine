@@ -23,6 +23,10 @@
             ],
             "text": "Fight (attack it)!",
             "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_attack"
+                }
             ]
         },
         {
@@ -41,6 +45,10 @@
             ],
             "text": "Fawn (greet it)!",
             "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_greet"
+                }
             ]
         },
         {
