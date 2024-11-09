@@ -13,11 +13,24 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v3
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: |
+        npm install  # Installs dependencies if needed by your script
+    
+    - name: Run generatePackagedPlayer.js
+      run: |
+        node generatePackagedPlayer.js "Quadrolax World" "fields"
+
     - name: Rename example file to index.html
       run: |
         mv ./PackagedPlayers/Quadrolax\ World.html ./index.html
 
-    - name: Clean up
+    - name: Cleanup
       run: |
         find . -mindepth 1 -not -name 'index.html' -delete
 
