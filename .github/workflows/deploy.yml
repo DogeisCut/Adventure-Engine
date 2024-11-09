@@ -25,6 +25,6 @@ jobs:
         commit_message: 'Deploy Quadrolax World.html as main page'
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Clean up (optional)
+    - name: Clean up
       run: |
-        rm ./Quadrolax\ World.html  # Optionally clean up the file after deployment
+        rm ./Quadrolax\ World.html
