@@ -1,0 +1,72 @@
+{
+    "scene": "snowy_mountains_eat_snow",
+    "scene_text": [
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "ate_mountain_snow",
+                    "value": false
+                }
+            ],
+            "output": "You scoop up a pile of cold snow in your hands and comedically bite into it. Obiously it's real cold, but the snow is fresh and you have no regrets."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "ate_mountain_snow",
+                    "value": true
+                }
+            ],
+            "output": "For some reason, you decide to eat some more snow. However, you scooped up from the same spot as last time and got a little mouthful of dirt. There are some regrets now."
+        }
+    ],
+    "events": [
+        {
+            "type": "disable_item_use"
+        },
+        {
+            "type": "set_flag",
+            "value": "ate_mountain_snow"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "ate_mountain_snow",
+                    "value": false
+                }
+            ],
+            "text": "Yippie!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "snowy_mountains"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "ate_mountain_snow",
+                    "value": true
+                }
+            ],
+            "text": "Ew!",
+            "events": [
+                {
+                    "type": "set_flag",
+                    "value": "ate_mountain_dirt"
+                },
+                {
+                    "type": "change_scene",
+                    "value": "snowy_mountains"
+                }
+            ]
+        }
+    ]
+}

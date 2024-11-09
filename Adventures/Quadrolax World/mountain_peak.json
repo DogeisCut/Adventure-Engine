@@ -1,0 +1,24 @@
+{
+    "scene": "mountain_peak",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "You contiune up the path on the side of the mountain. Just when you felt the mood of the snowy enviroment, a massive avalanche swept behind you, just barely missing you. There's no going back now."
+        }
+    ],
+    "events": [
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Uh oh.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "mountain_peak_town"
+                }
+            ]
+        }
+    ]
+}

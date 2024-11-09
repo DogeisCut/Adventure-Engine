@@ -25,6 +25,7 @@ The Adventure Engine is an engine designed for creating immersive text based adv
   - `close_popup`: Used by item scenes, more on that later.
   - `play_sound`: Works exactly the same as the scene event version.
   - `music_change`:  Works exactly the same as the scene event version.
+By the way, the order you define events can effect how they work.
 And that's all for a basic scene, however, there's still more to the adventure engine.
 ## Conditions
 Each condition is a dictionary of 3 keys, `type`, `key`, and `value`. There are only two `type`s; `flag`, and `item`. A condition is really quite simple, the `key` value is the name of the flag or item you want to check, and the `value` is whether or not you want it to be true or not. `value` is a boolean.

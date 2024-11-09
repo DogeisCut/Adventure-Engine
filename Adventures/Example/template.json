@@ -1,0 +1,24 @@
+{
+    "scene": "file_name",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": ""
+        }
+    ],
+    "events": [
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Choice 1",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "file_name"
+                }
+            ]
+        }
+    ]
+}

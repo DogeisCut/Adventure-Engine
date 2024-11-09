@@ -26,6 +26,22 @@
         },
         {
             "conditions": [
+                {
+                    "type": "flag",
+                    "key": "ate_mountain_dirt",
+                    "value": false
+                }
+            ],
+            "text": "Eat some snow.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "snowy_mountains_eat_snow"
+                }
+            ]
+        },
+        {
+            "conditions": [
             ],
             "text": "Go back.",
             "events": [
