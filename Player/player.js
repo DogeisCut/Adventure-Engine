@@ -213,6 +213,9 @@ function runChoiceEvents(events) {
             case "give_item":
                 inventory.push(value);
                 break;
+            case "take_item":
+                inventory.splice(inventory.indexOf(value), 1)
+                break;
             case "set_flag":
                 flags.add(value);
                 break;

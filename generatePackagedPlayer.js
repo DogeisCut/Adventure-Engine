@@ -72,7 +72,7 @@ function generatePackagedPlayer(sceneDirName, startScene) {
         
 
     const finalHtml = htmlTemplate.replace(
-        '<!-- SCRIPT_PLACEHOLDER -->',
+        '<script src="player.js"></script>',
         `<script>${populatedJs}</script>`
     ).replace('<title>Adventure Engine Player</title>', `<title>${sceneDirName}</title>`);
 
