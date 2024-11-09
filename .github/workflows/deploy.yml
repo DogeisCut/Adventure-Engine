@@ -13,6 +13,10 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v3
 
+    - name: Rename HTML file to index.html
+      run: |
+        mv ./PackagedPlayers/Quadrolax\ World.html ./index.html
+
     - name: Move Quadrolax World.html to root
       run: |
         mv ./PackagedPlayers/Quadrolax\ World.html ./Quadrolax\ World.html
@@ -22,7 +26,7 @@ jobs:
       with:
         publish_dir: ./
         publish_branch: gh-pages
-        commit_message: 'Deploy Quadrolax World.html as main page'
+        commit_message: 'Deploy index.html as main page'
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Clean up
