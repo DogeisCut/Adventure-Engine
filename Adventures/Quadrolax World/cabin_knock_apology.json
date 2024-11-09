@@ -1,0 +1,29 @@
+{
+    "scene": "cabin_knock_apology",
+    "scene_text": [
+        {
+            "conditions": [
+            ],
+            "output": "You decide to knock again. There is no respone."
+        }
+    ],
+    "events": [
+        {
+            "type": "play_sound",
+            "value": "door_knock"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Oh :(",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_invest"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "item": "Magic Whistle",
+    "scene": "",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "You blow the Magic Whistle, and a mystical sound fills the air. Suddenly, you find yourself back in the grassy field where you started your journey."
+        }
+    ],
+    "events": [
+        {
+            "type": "disable_item_use"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Continue!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "fields"
+                }
+            ]
+        },
+        {
+            "conditions": [
+            ],
+            "text": "Cancel!",
+            "events": [
+                {
+                    "type": "close_popup"
+                }
+            ]
+        }
+    ]
+}

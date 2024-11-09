@@ -1,0 +1,39 @@
+{
+    "scene": "snowy_mountains",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "You find yourself amidst towering snowy mountains. The air is crisp and cold, and the snow crunches beneath your boots. Pine trees dot the landscape, and a distant howl echoes through the peaks."
+        }
+    ],
+    "events": [
+        {
+            "type": "music_change",
+            "value": "instance1829"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Explore further into the mountains.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "mountain_peak"
+                }
+            ]
+        },
+        {
+            "conditions": [
+            ],
+            "text": "Go back.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "fields"
+                }
+            ]
+        }
+    ]
+}

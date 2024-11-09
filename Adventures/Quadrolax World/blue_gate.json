@@ -1,0 +1,25 @@
+{
+    "scene": "blue_gate",
+    "scene_text": [
+        {
+            "conditions": [
+            ],
+            "output": "A gate with a blue color-coded keyhole blocks your path! It seems you need some sort of blue key to open it..."
+        }
+    ],
+    "events": [
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Aw man!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "fields"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "item": "Cherry Pie",
+    "scene": "",
+    "scene_text": [
+        {
+            "conditions": [
+            ],
+            "output": "You hastily eat every square inch of the cherry filled pastriy. It taste like the heavens and guilt."
+        }
+    ],
+    "events": [
+        {
+            "type": "take_item",
+            "value": "Cherry Pie"
+        },
+        {
+            "type": "unset_flag",
+            "value": "has_pie"
+        },
+        {
+            "type": "set_flag",
+            "value": "eaten_pie"
+        },
+        {
+            "type": "disable_item_use"
+        },
+        {
+            "type": "play_sound",
+            "value": "chewing"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Yum!",
+            "events": [
+                {
+                    "type": "close_popup"
+                }
+            ]
+        }
+    ]
+}

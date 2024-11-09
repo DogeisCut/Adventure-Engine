@@ -1,0 +1,382 @@
+{
+    "item": "Blue Key",
+    "scene": "blue_gate",
+    "scene_text": [
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": false
+                }
+            ],
+            "output": "You place the key into the hole, it fits perfectly, the gate opens leading to some sort of city"
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": false
+                }
+            ],
+            "output": "You place the key into the hole, it fits perfectly, the gate opens leading to some sort of city. Or rather, it would've had you not shoved cherries into the keyhole. It's broken."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": true
+                }
+            ],
+            "output": "You push the door open effortlessly due to already having opened it."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": true
+                }
+            ],
+            "output": "You push the door open effortlessly due to already having opened it. Some of those cherries you shoved in there fall out."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": false
+                }
+            ],
+            "output": "You place the key into the hole, it fits perfectly, the gate opens leading to some sort of city. Or rather, it would've had you not shoved a whole cherry pie into the keyhole. It's broken."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": false
+                }
+            ],
+            "output": "You shoved several raw cherries and a whole cherry pie into the key hole, it's not going to open bud."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": true
+                }
+            ],
+            "output": "You push the door open effortlessly due to already having opened it. Somehow, the whole cherry pie only effected how it unlocked and not how it opened."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": true
+                }
+            ],
+            "output": "You push the door open effortlessly due to already having opened it. The unholy mix of raw cherries and pie you shoved in there somehow doesn't effect how the door opens."
+        }
+    ],
+    "events": [
+        {
+            "type": "disable_item_use"
+        },
+        {
+            "type": "set_flag",
+            "value": "opened_blue_gate"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": false
+                }
+            ],
+            "text": "Let's Go!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "quadro_city"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": false
+                }
+            ],
+            "text": "D:",
+            "events": [
+                {
+                    "type": "close_popup"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": false
+                }
+            ],
+            "text": "D:",
+            "events": [
+                {
+                    "type": "close_popup"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": false
+                }
+            ],
+            "text": "D:",
+            "events": [
+                {
+                    "type": "close_popup"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": true
+                }
+            ],
+            "text": "Let's Go!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "quadro_city"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": true
+                }
+            ],
+            "text": "Let's Go!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "quadro_city"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": false
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": true
+                }
+            ],
+            "text": "Let's Go!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "quadro_city"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherries",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "broke_gate_cherry_pie",
+                    "value": true
+                },
+                {
+                    "type": "flag",
+                    "key": "opened_blue_gate",
+                    "value": true
+                }
+            ],
+            "text": "Let's Go!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "quadro_city"
+                }
+            ]
+        }
+    ]
+}

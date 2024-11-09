@@ -1,0 +1,73 @@
+{
+    "scene": "dreamfields",
+    "scene_text": [
+      {
+        "conditions": [],
+        "output": "You find yourself laying amidst an infite field of an unknow, purple, glowing material. It's quite shiny and looks almost like rubber, streaks of lighter color swipe and swirl through its mass. You stick your hand into the ground getting ready to get up, it's soft to the touch and squishes like memory foam. You get up from where you were laying, you look up and notice the beautiful night sky. Then it hits you, you can't recall how you arrived here or even who you are."
+      }
+    ],
+    "events": [
+      {
+        "type": "music_change",
+        "value": 1
+      },
+      {
+        "type": "disable_item_use"
+      }
+    ],
+    "choices": [
+      {
+        "conditions": [],
+        "text": "Inspect the ground.",
+        "events": [
+          {
+            "type": "popup",
+            "value": [
+              "You bend down to examine the strange material beneath you. As you touch it, fleeting images flash before your eyes. Dreams, vivid and surreal, seem to be embedded in the very fabric of this dreamfield. It's as if the ground itself holds the memories and fantasies of countless dreamers.",
+              "..."
+            ]
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "text": "Attempt to remember.",
+        "events": [
+          {
+            "type": "popup",
+            "value": [
+              "Closing your eyes, you focus on piecing together the fragments of your memory. However, the memories slip through your mind like elusive shadows. It becomes evident that you can't unravel the mystery on your own; there's a missing link, a key to unlocking your forgotten past.",
+              "..."
+            ]
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "text": "Call out for help.",
+        "events": [
+          {
+            "type": "popup",
+            "value": [
+              "In the vast openness of the dreamfield, your voice echoes, but no response comes. It's as if the very essence of the dream realm is wrapped in silence. No one appears to answer your call for assistance, leaving you alone with your thoughts and questions.",
+              "..."
+            ]
+          }
+        ]
+      },
+      {
+        "conditions": [],
+        "text": "Explore the surroundings.",
+        "events": [
+          {
+            "type": "popup_transitional",
+            "value": [
+              "As you gaze into the distance, a mythical-looking Roman city comes into view. It's the only discernible feature on the dreamy horizon. Towers adorned with ethereal lights reach towards the sky, beckoning you to explore. The dream city appears both ancient and timeless, a surreal destination in this enigmatic dream realm.",
+              "Explore the city.",
+              "dreamcity"
+            ]
+          }
+        ]
+      }
+    ]
+  }

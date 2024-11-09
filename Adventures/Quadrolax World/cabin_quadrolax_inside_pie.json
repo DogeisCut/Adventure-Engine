@@ -1,0 +1,115 @@
+{
+    "scene": "cabin_quadrolax_inside_pie",
+    "scene_text": [
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "no_pie_on_windowsill",
+                    "value": true
+                }
+            ],
+            "output": "Much to the dismay of the creature, the pie is missing from the windowsill. They looked really bummed out, and sit at the chair across from you."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "no_pie_on_windowsill",
+                    "value": false
+                }
+            ],
+            "output": "The creature seems very excited to show you this, within its upper set of paws lies a delicious pie. The very thing that brought bliss to your nose. They lie it onto the table and cut out a slice for them and you, then they take a seat across from you."
+        }
+    ],
+    "events": [
+        {
+            "type": "music_change",
+            "value": "home"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "no_pie_on_windowsill",
+                    "value": true
+                }
+            ],
+            "text": "Shrug it off.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_inside_shrug"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "no_pie_on_windowsill",
+                    "value": true
+                }
+            ],
+            "text": "Tell the truth.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_inside_truth"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "no_pie_on_windowsill",
+                    "value": false
+                }
+            ],
+            "text": "\"Oh boy, pie!\"",
+            "events": [
+                {
+                    "type": "give_item",
+                    "value": "Cherry Pie Slice"
+                },
+                {
+                    "type": "set_flag",
+                    "value": "no_pie_on_windowsill_gifted"
+                },
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_inside_next"
+                }
+            ]
+        },
+        {
+            "conditions": [
+            ],
+            "text": "Flirt with them!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_inside_flirt"
+                }
+            ]
+        },
+        {
+            "conditions": [
+            ],
+            "text": "\"Gotta go!\"",
+            "events": [
+                {
+                    "type": "set_flag",
+                    "value": "cabin_quadrolax_rude_leave"
+                },
+                {
+                    "type": "change_scene",
+                    "value": "cabin_invest"
+                }
+            ]
+        }
+    ]
+}

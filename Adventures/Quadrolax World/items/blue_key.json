@@ -1,0 +1,28 @@
+{
+    "item": "Blue Key",
+    "scene": "",
+    "scene_text": [
+        {
+            "conditions": [
+            ],
+            "output": "The blue key doesn't seem useful here."
+        }
+    ],
+    "events": [
+        {
+            "type": "disable_item_use"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Makes sense.",
+            "events": [
+                {
+                    "type": "close_popup"
+                }
+            ]
+        }
+    ]
+}
