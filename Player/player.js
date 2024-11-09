@@ -328,3 +328,6 @@ document.addEventListener("click", () => {
 currentScene = scenes[startScene]
 
 
+window.addEventListener('load', function() {
+    document.getElementById('choices').innerHTML = "▶ Click to Start"
+});
