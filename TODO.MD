@@ -6,3 +6,6 @@
 - [ ] Debug mode
 # Editor
 - [ ] yes
+# Features
+- [ ] Images in scenes
+- [ ] Backgrounds
