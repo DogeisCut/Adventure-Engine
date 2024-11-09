@@ -1,4 +1,2 @@
 # Godot 4+ specific ignores
 .godot/
-# Mark packedplayers content as binary since it ruins the language percentages :(
-PackagedPlayers/* binary
