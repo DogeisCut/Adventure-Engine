@@ -16,4 +16,4 @@
 - [ ] Support for different styles of text adventures (one's that let you interact with objects in various ways, etc.)
 - [ ] AdventureMeta.json (Stuff like styles, default choices, non inventory/flag stats, etc.)
 - [ ] Non inventory/flag stats (like numerical)
-- [ ] Animated and Customizable Death/Fail/Win/Endings Screens/System
+- [ ] Animated and Customizable Death/Fail/Win/Endings Screens/System (with confetti!!)
