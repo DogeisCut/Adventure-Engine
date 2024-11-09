@@ -1,0 +1,40 @@
+{
+    "scene": "cabin_quadrolax_greet",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "You stick your hand out and let out and awkward greeting. The creature doesn't seem to know what you are saying but recognizes the welcoming attitude anyways. It moves to the side seemingly inviting you into the cabin."        }
+    ],
+    "events": [
+        {
+            "type": "set_flag",
+            "value": "greeted_quadrolax"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [],
+            "text": "Go on in.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_inside"
+                }
+            ]
+        },
+        {
+            "conditions": [],
+            "text": "Leave...",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_invest"
+                },
+                {
+                    "type": "set_flag",
+                    "value": "cabin_quadrolax_rude_leave"
+                }
+            ]
+        }
+    ]
+}

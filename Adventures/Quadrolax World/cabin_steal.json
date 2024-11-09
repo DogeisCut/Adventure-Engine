@@ -1,0 +1,45 @@
+{
+    "scene": "cabin_steal",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "You stealthily reach through the window and snatch the delicious Cherry Pie from the windowsill. You now have the pie."
+        }
+    ],
+    "events": [
+        {
+            "type": "give_item",
+            "value": "Cherry Pie"
+        },
+        {
+            "type": "set_flag",
+            "value": "has_pie"
+        },
+        {
+            "type": "set_flag",
+            "value": "no_pie_on_windowsill"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [],
+            "text": "Leave with the pie.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin"
+                }
+            ]
+        },
+        {
+            "conditions": [],
+            "text": "Try to break further into the cabin.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_break_in"
+                }
+            ]
+        }
+    ]
+}

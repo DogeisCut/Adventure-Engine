@@ -1,0 +1,33 @@
+{
+    "scene": "desert_take",
+    "scene_text": [
+        {
+            "conditions": [
+            ],
+            "output": "You take some of that cool dark purple sand and shove it in your pocket."
+        }
+    ],
+    "events": [
+        {
+            "type": "disable_item_use"
+        },
+        {
+            "type": "give_item",
+            "value": "Purple Sand"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Coolio.",
+            "events": [
+                
+                {
+                    "type": "change_scene",
+                    "value": "desert"
+                }
+            ]
+        }
+    ]
+}

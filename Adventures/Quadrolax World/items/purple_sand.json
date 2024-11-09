@@ -1,0 +1,32 @@
+{
+    "item": "Purple Sand",
+    "scene": "",
+    "scene_text": [
+        {
+            "conditions": [
+            ],
+            "output": "You toss some sand into the air and promptly lose it."
+        }
+    ],
+    "events": [
+        {
+            "type": "take_item",
+            "value": "Purple Sand"
+        },
+        {
+            "type": "disable_item_use"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Shucks!",
+            "events": [
+                {
+                    "type": "close_popup"
+                }
+            ]
+        }
+    ]
+}
