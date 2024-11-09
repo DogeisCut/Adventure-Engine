@@ -1,0 +1,49 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when changes are pushed to the `main` branch
+  pull_request:
+    branches:
+      - main  # Optionally, also trigger for pull requests to `main`
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js (optional, if needed for building)
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Set the node version if you are building with Node.js
+
+    - name: Install dependencies (if needed)
+      run: |
+        npm install  # Add this step if your project has Node.js dependencies
+
+    - name: Build project (optional, if you need a build step)
+      run: |
+        npm run build  # Add this step if you need to build before deploying
+
+    - name: Set up GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        # The directory containing the built files or the path to your static files
+        folder: ./PackagedPlayers  # Directory containing the HTML file to be deployed
+        # Customize the GitHub Pages deployment configuration
+        target_branch: gh-pages  # The branch to which your GitHub Pages is deployed
+        commit_message: 'Deploy to GitHub Pages'
+
+    - name: Move the HTML file to root
+      run: |
+        mv ./PackagedPlayers/Quadrolax\ World.html ./Quadrolax\ World.html
+
+    - name: Commit the changes
+      run: |
+        git add .
+        git commit -m "Deploy updated Quadrolax World.html as main page"
+        git push
