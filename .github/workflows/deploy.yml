@@ -20,10 +20,11 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        folder: .  # Deploy the entire content in the root of the repository
-        target_branch: gh-pages  # The branch where your GitHub Pages site is hosted
+        publish_dir: ./  # Directory to deploy (root folder)
+        publish_branch: gh-pages  # Branch to deploy to
         commit_message: 'Deploy Quadrolax World.html as main page'
-        
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the default GitHub token
+
     - name: Clean up (optional)
       run: |
         rm ./Quadrolax\ World.html  # Optionally clean up the file after deployment
