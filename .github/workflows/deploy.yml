@@ -8,18 +8,22 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v3
 
-    - name: Rename HTML file to index.html
+    - name: Rename example file to index.html
       run: |
         mv ./PackagedPlayers/Quadrolax\ World.html ./index.html
 
-    - name: Move Quadrolax World.html to root
+    - name: Move example to root
       run: |
-        mv ./PackagedPlayers/Quadrolax\ World.html ./Quadrolax\ World.html
+        mv ./PackagedPlayers/index.html ./index.html
+
+    - name: Clean up
+      run: |
+        find . -mindepth 1 -not -name 'index.html' -delete
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
@@ -29,6 +33,3 @@ jobs:
         commit_message: 'Deploy index.html as main page'
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Clean up
-      run: |
-        rm ./Quadrolax\ World.html
