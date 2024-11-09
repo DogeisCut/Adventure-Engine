@@ -17,10 +17,6 @@ jobs:
       run: |
         mv ./PackagedPlayers/Quadrolax\ World.html ./index.html
 
-    - name: Move example to root
-      run: |
-        mv ./PackagedPlayers/index.html ./index.html
-
     - name: Clean up
       run: |
         find . -mindepth 1 -not -name 'index.html' -delete
