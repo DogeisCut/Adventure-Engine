@@ -42,13 +42,19 @@ function renderInventory() {
             choicesElem.appendChild(itemElem);
         });
     }
+    
+    if (filledInventory) {
+        const lineBreak = document.createElement("br");
+        choicesElem.appendChild(lineBreak);
+    }
 
     const closeChoiceElem = document.createElement("div");
     closeChoiceElem.onclick = () => {
         closeInventory()
         new Audio(engineSounds["select"]).play();
     };
-    closeChoiceElem.innerHTML = (filledInventory ? "<br>" : "") + "<span class=\"choice\">-Close inventory.</span>";
+    closeChoiceElem.className = "cursor"
+    closeChoiceElem.innerHTML = "<span class=\"choice\">-Close inventory.</span>";
     choicesElem.appendChild(closeChoiceElem);
 }
 
@@ -113,6 +119,7 @@ function renderScene(scene, instant = false) {
                 chooseOption(id);
                 new Audio(engineSounds["select"]).play();
             }
+            choicElem.className = "cursor"
             choicElem.innerHTML = `<span class=\"choice\">-${text}</span>`;
             choicesElem.appendChild(choicElem);
         }
@@ -120,12 +127,15 @@ function renderScene(scene, instant = false) {
     });
 
     if (inventoryEnabled) {
+        const lineBreak = document.createElement("br");
+        choicesElem.appendChild(lineBreak);
         const openInventoryChoiceElem = document.createElement("div");
         openInventoryChoiceElem.onclick = () => {
             openInventory();
             new Audio(engineSounds["select"]).play();
         };
-        openInventoryChoiceElem.innerHTML = "<br><span class=\"choice\">-Open inventory.</span>";
+        openInventoryChoiceElem.className = "cursor"
+        openInventoryChoiceElem.innerHTML = "<span class=\"choice\">-Open inventory.</span>";
         choicesElem.appendChild(openInventoryChoiceElem);
     }
     inventoryEnabled = true;
