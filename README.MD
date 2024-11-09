@@ -1,7 +1,6 @@
 # Setting up an Adventure
 You can make a new adventure by following the file format (or using the editor when that's ready), and saving it to `Scenes`
 Afterwards, run `node generatePackagedPlayer.js "Adventure Directory Name" "starting_scene"` which will generate an adventure HTML file in `PackagedPlayers` with the name of your adventure directory.
-
 # Adventure Engine Format
 The Adventure Engine is an engine designed for creating immersive text based adventures, It uses a scene, inventory, and flags system to keep track of the player's state, items, and history. Scenes are stored as JSON files, with each file being named after its scene ID. Item scenes follow a similar scheme but go into a subdirectory named `items` and are named as so `item_name_scene_to_be_used_in`
 ## Main keys
