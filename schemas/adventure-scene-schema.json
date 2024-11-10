@@ -32,6 +32,21 @@
                 "required": ["conditions", "output"]
             }
         },
+        "ending": {
+            "type": "object",
+            "description": "A list of settings that define if this scene is an ending, and how. The existance of this object makes the scene an ending.",
+            "properties": {
+                "ending_type": {
+                    "type": "string",
+                    "description": "Changes the type of ending, all this does is style the ending text. Can be edited in the adventure meta but is usually either \"good\" or \"bad\""
+                },
+                "ending_title": {
+                    "type": "string",
+                    "description": "The text of the ending. Displayed in big letters above the scene text in its own font."
+                }
+            },
+            "required": ["ending_type", "ending_title"]
+        },
         "events": {
             "type": "array",
             "description": "Events that trigger upon entering the scene.",
@@ -105,7 +120,8 @@
                         "change_scene",
                         "popup",
                         "popup_transitional",
-                        "close_popup"
+                        "close_popup",
+                        "spray_confetti"
                     ],
                     "description": "Event type."
                 },

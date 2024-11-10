@@ -8,7 +8,7 @@
 - [ ] Debug mode
 - [ ] Fix popup scenes
 - [ ] Fix music bug (music changes arent canceled when quickly switching scenes so you can get the wrong music sometimes)
-- [ ] Typing effect
+- [ ] Typewriter effect
 # Editor
 - [ ] yes
 # Features

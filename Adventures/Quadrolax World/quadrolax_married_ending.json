@@ -1,0 +1,25 @@
+{
+    "scene": "quadrolax_married_ending",
+    "ending": {
+        "ending_type": "good",
+        "ending_title": "Married Ending"
+    },
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "After a suprisingly short amount of time, and a successful marriage, you and this quadrolax went on to live the rest of your days together in peace."
+        }
+    ],
+    "events": [
+        {
+            "type": "music_change",
+            "value": "Reunited"
+        },
+        {
+            "type": "spray_confetti"
+        }
+    ],
+    "choices": [
+
+    ]
+}

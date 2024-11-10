@@ -1,0 +1,18 @@
+{
+    "scene": "quadro_city",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "you shouldnt even be able to get here yet :("
+        }
+    ],
+    "events": [
+        {
+            "type": "music_change",
+            "value": "Jazz In Paris"
+        }
+    ],
+    "choices": [
+
+    ]
+}
