@@ -1,0 +1,60 @@
+{
+    "scene": "cabin_quadrolax_inside_flirt2",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "For some reason, you decide to keep going. Somehow, in your favor, the creature seems interested. "
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "know_about_resturant",
+                    "value": false
+                }
+            ],
+            "output": "You don't even know any good places here nor what this creature is even called."
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "know_about_resturant",
+                    "value": true
+                }
+            ],
+            "output": "You don't even know awhat this creature is even called. But at least you know a place."
+        }
+    ],
+    "events": [
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "\"Uhhhh uhmmm uhhh uhh uhhhmmmmmm\"",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_inside_flirt_fail"
+                }
+            ]
+        },
+        {
+            "conditions": [
+                {
+                    "type": "flag",
+                    "key": "know_about_resturant",
+                    "value": true
+                }
+            ],
+            "text": "\"Meet me later at the town resturant.\"",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_inside_flirt3"
+                }
+            ]
+        }
+    ]
+}

@@ -42,7 +42,7 @@ function loadBase64Files(dirPath) {
     return data;
 }
 
-function generatePackagedPlayer(sceneDirName, startScene) {
+function generatePackagedPlayer(sceneDirName, startScene, debugMode = false) {
     const sceneDirPath = path.join(__dirname, 'Adventures', sceneDirName);
     const itemsDirPath = path.join(sceneDirPath, 'items');
     const soundsDirPath = path.join(sceneDirPath, 'sounds');

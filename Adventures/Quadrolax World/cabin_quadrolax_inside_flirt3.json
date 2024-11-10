@@ -1,0 +1,39 @@
+{
+    "scene": "cabin_quadrolax_inside_flirt3",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "Somehow with your unsurmountable rizz and beautiful voice, just as quickly as you came, you two have already set up a date. It's been a few hours since the prior interaction, you are approaching the town resturant. You can see them inside waiting for you."
+        }
+    ],
+    "events": [
+        {
+            "type": "music_change",
+            "value": ""
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "Go on in.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "resturant_quadrolax_date"
+                }
+            ]
+        },
+        {
+            "conditions": [
+            ],
+            "text": "Ditch them.",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "quadrolax_date_ditch"
+                }
+            ]
+        }
+    ]
+}

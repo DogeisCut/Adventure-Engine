@@ -1,0 +1,17 @@
+{
+    "json.schemas": [
+      {
+        "fileMatch": [
+          "/Adventures/**/*.json"
+        ],
+        "url": "./schemas/adventure-scene-schema.json"
+      },
+      {
+        "fileMatch": [
+          "/Adventures/**/AdventureMeta.json"
+        ],
+        "url": "none"  // This disables schema association for AdventureMeta.json files
+      }
+    ]
+  }
+  

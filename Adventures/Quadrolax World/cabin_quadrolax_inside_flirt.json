@@ -1,0 +1,39 @@
+{
+    "scene": "cabin_quadrolax_inside_flirt",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "You... (sigh). You attempt to FLIRT with the creature by making seductive gestures towards it. At first it doesnt even realise what you are trying to do, but then picks up on a few queues. It seems quite flustered and embarrsed, blushing and covering its face."
+        }
+    ],
+    "events": [
+        {
+            "type": "set_flag",
+            "value": "quadrolax_flirt"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "\"How about you and I get to know each other sometime?\"",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_inside_flirt2"
+                }
+            ]
+        },
+        {
+            "conditions": [
+            ],
+            "text": "ABANDON SHIP!",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "cabin_quadrolax_inside_flirt_abandon"
+                }
+            ]
+        }
+    ]
+}

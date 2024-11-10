@@ -19,10 +19,14 @@
                     "value": true
                 }
             ],
-            "output": "You approach the center of the town, several buildings for different purposes are aviable to walk into. Some different colors of that blue creature in the distance seem to be interacting. You wonder what they even are."
+            "output": "You approach the center of the town, several buildings for different purposes are aviable to walk into. Some different colors of that blue creature in the distance seem to be interacting. You start to seriously wonder what they even are."
         }
     ],
     "events": [
+        {
+            "type": "set_flag",
+            "value": "know_about_resturant"
+        }
     ],
     "choices": [
         {

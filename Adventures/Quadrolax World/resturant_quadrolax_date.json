@@ -1,0 +1,39 @@
+{
+    "scene": "resturant_quadrolax_date",
+    "scene_text": [
+        {
+            "conditions": [],
+            "output": "You enter the resturant blah blah blahg im too lazy to write this rn"
+        }
+    ],
+    "events": [
+        {
+            "type": "music_change",
+            "value": "Charlie's Here"
+        }
+    ],
+    "choices": [
+        {
+            "conditions": [
+            ],
+            "text": "get spagetti (correct)",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "file_name"
+                }
+            ]
+        },
+        {
+            "conditions": [
+            ],
+            "text": "get steak or smth idfk",
+            "events": [
+                {
+                    "type": "change_scene",
+                    "value": "file_name"
+                }
+            ]
+        }
+    ]
+}

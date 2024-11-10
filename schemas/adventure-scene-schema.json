@@ -1,0 +1,120 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Adventure Scene",
+    "type": "object",
+    "properties": {
+        "scene": {
+            "type": "string",
+            "description": "The unique identifier for the scene. Used as the scene filter for item scenes."
+        },
+        "item": {
+            "type": "string",
+            "description": "The name of the item used for the item scene."
+        },
+        "scene_text": {
+            "type": "array",
+            "description": "Array of possible text outputs for the scene based on conditions.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "conditions": {
+                        "type": "array",
+                        "description": "Conditions to determine if this text is displayed.",
+                        "items": {
+                            "$ref": "#/definitions/condition"
+                        }
+                    },
+                    "output": {
+                        "type": "string",
+                        "description": "Text displayed when conditions are met."
+                    }
+                },
+                "required": ["conditions", "output"]
+            }
+        },
+        "events": {
+            "type": "array",
+            "description": "Events that trigger upon entering the scene.",
+            "items": {
+                "$ref": "#/definitions/event"
+            }
+        },
+        "choices": {
+            "type": "array",
+            "description": "Choices available in the scene.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "conditions": {
+                        "type": "array",
+                        "description": "Conditions to display the choice.",
+                        "items": {
+                            "$ref": "#/definitions/condition"
+                        }
+                    },
+                    "text": {
+                        "type": "string",
+                        "description": "Text displayed for the choice."
+                    },
+                    "events": {
+                        "type": "array",
+                        "description": "Events triggered when choice is selected.",
+                        "items": {
+                            "$ref": "#/definitions/event"
+                        }
+                    }
+                },
+                "required": ["text", "events"]
+            }
+        }
+    },
+    "required": ["scene", "scene_text", "events", "choices"],
+    "definitions": {
+        "condition": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": ["flag", "item"],
+                    "description": "Type of condition: 'flag' or 'item'."
+                },
+                "key": {
+                    "type": "string",
+                    "description": "Name of the flag or item being checked."
+                },
+                "value": {
+                    "type": "boolean",
+                    "description": "Expected presence (true) or absence (false) of the flag or item."
+                }
+            },
+            "required": ["type", "key", "value"]
+        },
+        "event": {
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "music_change",
+                        "play_sound",
+                        "give_item",
+                        "take_item",
+                        "set_flag",
+                        "unset_flag",
+                        "disable_item_use",
+                        "change_scene",
+                        "popup",
+                        "popup_transitional",
+                        "close_popup"
+                    ],
+                    "description": "Event type."
+                },
+                "value": {
+                    "type": ["string", "null"],
+                    "description": "Optional value associated with the event, such as an item name, scene ID, or flag name."
+                }
+            },
+            "required": ["type"]
+        }
+    }
+}
