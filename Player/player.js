@@ -201,6 +201,7 @@ function runChoiceEvents(events) {
             case "change_scene":
                 const lastSceneName = currentScene.scene
                 currentScene = scenes[value];
+                inPopup = false;
                 if (!currentScene) {
                     renderError(`Scene '${value}' not found! Last scene: '${lastSceneName}'`)
                     break;
