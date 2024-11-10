@@ -6,6 +6,9 @@
 # Player
 - [ ] Missing event types
 - [ ] Debug mode
+    - [ ] Scene info (like current scene, last scene)
+    - [ ] Inventory and Flags (and making them editable)
+    - [ ] Load any scene (even raw scenes!)
 - [ ] Fix popup scenes
 - [ ] Fix music bug (music changes arent canceled when quickly switching scenes so you can get the wrong music sometimes)
 - [ ] Typewriter effect
