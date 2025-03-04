@@ -335,13 +335,11 @@ function startNewTrack(trackName) {
     }, 80);
 }
 
-document.addEventListener("click", () => {
-    runSceneEvents(currentScene.events);
-    renderScene(currentScene);
-}, { once: true });
-currentScene = scenes[startScene]
-
-
 window.addEventListener('load', function() {
     document.getElementById('choices').innerHTML = "▶ Click to Start"
+    document.addEventListener("click", () => {
+        runSceneEvents(currentScene.events);
+        renderScene(currentScene);
+    }, { once: true });
+    currentScene = scenes[startScene]
 });
