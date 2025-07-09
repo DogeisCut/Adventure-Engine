@@ -42,9 +42,34 @@ function loadBase64Files(dirPath) {
     return data;
 }
 
+function validateOptions(options) {
+    if (typeof options !== 'object' || options === null || Array.isArray(options)) {
+        console.error('Options must be a non-null object!');
+        return false;
+    }
+    for (const element of Object.keys(options)) {
+        switch(element) {
+            case 'embedSounds':
+                if (typeof options[element] !== 'boolean') {
+                    console.error('Option embedSounds is not a boolean! Received: ' + options[element]);
+                    return false;
+                }
+                break;
+            default:
+                console.error('Unknown option: ' + element);
+                return false;
+        }
+    }
+    return true;
+}
+
 function generatePackagedPlayer(sceneDirName, startScene, options = {
     embedSounds: true
 }, debugMode = false) {
+    if (!validateOptions(options)) {
+        console.error('Failed to package HTML!')
+        return
+    }
     const sceneDirPath = path.join(__dirname, 'Adventures', sceneDirName);
     const itemsDirPath = path.join(sceneDirPath, 'items');
     const soundsDirPath = path.join(sceneDirPath, 'sounds');
