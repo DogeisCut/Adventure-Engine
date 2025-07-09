@@ -24,7 +24,7 @@ jobs:
     
     - name: Run generatePackagedPlayer.js
       run: |
-        node generatePackagedPlayer.js "Quadrolax World" "fields"
+        node generatePackagedPlayer.js "Quadrolax World" "fields" {embedSounds: false} false
 
     - name: Rename example file to index.html
       run: |
