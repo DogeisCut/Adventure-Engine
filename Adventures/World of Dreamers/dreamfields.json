@@ -9,7 +9,7 @@
     "events": [
       {
         "type": "music_change",
-        "value": 1
+        "value": "1"
       },
       {
         "type": "disable_item_use"

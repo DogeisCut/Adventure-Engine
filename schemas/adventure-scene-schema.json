@@ -126,7 +126,7 @@
                     "description": "Event type."
                 },
                 "value": {
-                    "type": ["string", "null"],
+                    "type": ["string", "null", "array"],
                     "description": "Optional value associated with the event, such as an item name, scene ID, or flag name."
                 }
             },

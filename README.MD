@@ -3,7 +3,7 @@ You can make a new adventure by following the file format (or using the editor w
 Afterwards, run `node generatePackagedPlayer.js "Adventure Directory Name" "starting_scene"` which will generate an adventure HTML file in `PackagedPlayers` with the name of your adventure directory. You can run `node generatePackagedPlayer.js "Quadrolax World" "fields"` to package the example adventure.
 # Adventure Engine Format
 The Adventure Engine is an engine designed for creating immersive text based adventures, It uses a scene, inventory, and flags system to keep track of the player's state, items, and history. Scenes are stored as JSON files, with each file being named after its scene ID. Item scenes follow a similar scheme but go into a subdirectory named `items` and are named as so `item_name_scene_to_be_used_in`
-## Main keys
+## Main keys 
 - `scene`: Defines the internal name of the scene, used for scene transitions.
 - `scene_text`: An array of the potential text the player sees when within the scene, each dictionary instance has a `conditions` field and a `output` field. `output` defines what text is shown assuming the condition is true. `scene_text` entries are concatenated with one another first to last assuming multiple conditions are true. More on conditions later. each `scene_text` entry can also optionally have a style, this however is currently unsupported.
 - `events`: An array of various types of events to activate when first entering the scene, each event is a dictionary taking a `type` and `value` key, the types of events are as follows, keep in mind that scene events differ from choice events:

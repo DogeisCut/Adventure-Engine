@@ -25,3 +25,4 @@
 - [ ] Quick time events?
 - [ ] `random` conditional type
 - [ ] A way to randomize choice order.
+- [ ] Opt out of sound packing (instead store sounds in a sound folder within a folder of the same name)
