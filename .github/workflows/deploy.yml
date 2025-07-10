@@ -26,15 +26,26 @@ jobs:
       run: |
         node generatePackagedPlayer.js "Quadrolax World" "fields" '{"embedAssets": false}' false
 
-    - name: Move Quadrolax World contents to root, cleanup, and rename
-      run: |
-        shopt -s dotglob
-        mkdir -p tmp_preserve
-        mv "./PackagedPlayers/Quadrolax World/"* tmp_preserve/
-        rm -rf ./* .[^.]* || true
-        mv tmp_preserve/* ./
-        rmdir tmp_preserve
-        mv "Quadrolax World.html" index.html
+    - name: Enable dotglob so mv includes hidden files
+      run: shopt -s dotglob
+
+    - name: Create temporary folder to preserve Quadrolax World contents
+      run: mkdir -p tmp_preserve
+
+    - name: Move contents from PackagedPlayers/Quadrolax World to temp
+      run: mv ./PackagedPlayers/Quadrolax\ World/* tmp_preserve/
+
+    - name: Delete everything in the current directory (including dotfiles)
+      run: rm -rf ./* .[^.]* || true
+
+    - name: Move preserved files back to root
+      run: mv tmp_preserve/* ./
+
+    - name: Remove temporary folder
+      run: rmdir tmp_preserve
+
+    - name: Rename Quadrolax World.html to index.html
+      run: mv "Quadrolax World.html" index.html
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
