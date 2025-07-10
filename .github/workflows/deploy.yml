@@ -35,8 +35,9 @@ jobs:
     - name: Move contents from PackagedPlayers/Quadrolax World to temp
       run: mv ./PackagedPlayers/Quadrolax\ World/* tmp_preserve/
 
-    - name: Delete everything in the current directory (including dotfiles)
-      run: rm -rf ./* .[^.]* || true
+    - name: Delete everything in the current directory EXCEPT tmp_preserve
+      run: |
+        find . ! -path "./tmp_preserve" ! -path "." -maxdepth 1 -print0 | xargs -0 rm -rf
 
     - name: Move preserved files back to root
       run: mv tmp_preserve/* ./
