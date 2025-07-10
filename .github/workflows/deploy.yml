@@ -37,7 +37,7 @@ jobs:
 
     - name: Cleanup
       run: |
-        find . -mindepth 1 \
+        find . -mindepth 1 -depth \
           -not -name 'index.html' \
           -not -name 'sounds' \
           -not -name 'music' \
