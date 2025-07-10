@@ -3,7 +3,7 @@
 - [ ] Conditional Events
 - [ ] Scene parenting (base scenes off other scenes) `type` field that controls if its an item scene or not
 - [X] Json Schema (for vscode autofill)
-- [ ] Optional "scenes" and "item_scenes" folders that would let you organize your scenes into further subdirs.
+- [ ] Optional "scenes" folders that would let you organize your scenes (and items) into further subdirs.
 # Player
 - [ ] Missing event types
 - [ ] Debug mode
