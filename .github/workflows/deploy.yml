@@ -24,15 +24,24 @@ jobs:
     
     - name: Run generatePackagedPlayer.js
       run: |
-        node generatePackagedPlayer.js "Quadrolax World" "fields" {embedSounds: false} false
+        node generatePackagedPlayer.js "Quadrolax World" "fields" '{"embedAssets": false}' false
 
     - name: Rename example file to index.html
       run: |
-        mv ./PackagedPlayers/Quadrolax\ World.html ./index.html
+        mv ./PackagedPlayers/Quadrolax\ World/Quadrolax\ World.html ./index.html
+
+    - name: Move assets
+      run: |
+        mv ./PackagedPlayers/Quadrolax\ World/music/ ./music/
+        mv ./PackagedPlayers/Quadrolax\ World/sounds/ ./sounds/
 
     - name: Cleanup
       run: |
-        find . -mindepth 1 -not -name 'index.html' -delete
+        find . -mindepth 1 \
+          -not -name 'index.html' \
+          -not -name 'sounds' \
+          -not -name 'music' \
+          -delete
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
