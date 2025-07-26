@@ -38,6 +38,7 @@ function renderInventory() {
                 useItem(item);
                 new Audio(engineSounds["select"]).play();
             }
+            itemElem.className = "cursor"
             itemElem.innerHTML = `<span class=\"choice\">-${item}</span>`;
             choicesElem.appendChild(itemElem);
         });
